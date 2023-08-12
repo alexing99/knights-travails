@@ -1,0 +1,110 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#promptBox {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.content {
+  display: flex;
+}
+
+.y {
+  height: 490px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-top: 90px;
+}
+
+#chessboard {
+  flex: 1 1 1;
+  display: grid;
+  grid-template: repeat(9, 1fr) / repeat(8, 1fr);
+  border: none;
+  height: 600px;
+  width: 600px;
+  resize: both;
+}
+
+.square {
+  border: 1px black solid;
+  display: flex;
+  justify-content: center;
+}
+
+.x-axis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#horse {
+  height: 65px;
+  padding: none;
+}
+
+#stable {
+  max-width: 100%;
+  max-height: 100%;
+  padding: none;
+}
+
+.square:active {
+  background-color: black;
+}
+
+#cell-1-7,
+#cell-1-5,
+#cell-1-3,
+#cell-1-1,
+.square:nth-child(9) ~ div:nth-child(-2n + 16),
+.square:nth-child(17) ~ div:nth-child(-2n + 23),
+.square:nth-child(25) ~ div:nth-child(-2n + 32),
+.square:nth-child(33) ~ div:nth-child(-2n + 39),
+.square:nth-child(41) ~ div:nth-child(-2n + 48),
+.square:nth-child(49) ~ div:nth-child(-2n + 55),
+.square:nth-child(57) ~ div:nth-child(-2n + 64),
+.square:nth-child(65) ~ div:nth-child(-2n + 71) {
+  background-color: blanchedalmond;
+  color: #fff;
+}
+
+#cell-1-8,
+#cell-1-6,
+#cell-1-4,
+#cell-1-2,
+#cell-8-1,
+.square:nth-child(9) ~ div:nth-child(-2n + 15),
+.square:nth-child(17) ~ div:nth-child(-2n + 24),
+.square:nth-child(25) ~ div:nth-child(-2n + 31),
+.square:nth-child(33) ~ div:nth-child(-2n + 40),
+.square:nth-child(41) ~ div:nth-child(-2n + 47),
+.square:nth-child(49) ~ div:nth-child(-2n + 56),
+.square:nth-child(57) ~ div:nth-child(-2n + 63),
+.square:nth-child(65) ~ div:nth-child(-2n + 70) {
+  background-color: cadetblue;
+  color: #fff;
+}
+
+.square:hover {
+  background-color: aqua;
+}
+
+#resetButt {
+  border: none;
+  background-color: palevioletred;
+  margin-top: 25px;
+  padding: 20px;
+  font-size: 1em;
+  font-weight: bold;
+}
